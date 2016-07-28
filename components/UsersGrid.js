@@ -30,11 +30,11 @@ class UsersGrid extends Component {
 
         let {userList} = this.state;
         return (
-            (userList.length > 0) ? <ul className="list">
+            (userList.length > 0) ? <div className="list">
                 { userList.map( (elem, index, array) => {
                     return <User delete={this.state.deleteUser} key={elem.id} userId={elem.id}>{elem.name}</User>
                 })}
-            </ul> : null
+            </div> : null
         )
 
 
